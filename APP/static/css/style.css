@@ -1,0 +1,811 @@
+html {
+    direction: rtl;
+}
+
+body {
+    direction: rtl;
+    text-align: right;
+}
+
+.wrapper { /* this class give content part the whole 12 column of the bootstrap grid without the sidebar part*/
+    display: flex; 
+    width: 100%;
+}
+
+/* -------------------------------------- sidebar styling -------------------------------------- */
+.sidebar{
+    min-height: 100vh; /* this make the sidebar extend vertically to the end of the page*/
+    width: 25%;
+    height: 100%;
+    background-color: rgb(238, 238, 238);
+    position: relative; /* set inner div width to be equal to the width of the outer div*/ 
+}
+
+.sidebar ul {
+    list-style: none; /* to remove list-style property from the list of items*/
+    padding-right: 0; /* remove indentation (space) from right*/
+}
+
+#active{
+    border-right-style: solid;
+    color: black;
+}
+
+.sidebarLogo{ /* to center the logo*/
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.sidebarLogo a img { /* to resize the logo*/
+    width: 150px;
+    height: 100%;
+}
+
+.sidebar ul li {
+    line-height: 30px;
+}
+.sidebar ul li a {
+    color: rgb(148, 148, 148);
+    align-items: center;
+    display: flex;
+}
+
+.sidebar ul li a:hover{
+    background-color: rgb(228, 228, 228);
+}
+
+.sidebar ul li a i{
+    padding-left: 15px;
+    padding-right: 20px;
+}
+
+
+.sidebar .sidebarEnd {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    line-height: 30px;
+}
+
+.sidebar .sidebarEnd ul {
+    list-style: none; /* to remove list-style property from the list of items*/
+    padding-right: 0; /* remove indentation (space) from right*/
+}
+
+.sidebar .sidebarEnd ul li {
+    line-height: 30px;
+}
+.sidebar .sidebarEnd ul li a {
+    color: rgb(148, 148, 148);
+    align-items: center;
+    display: flex;
+}
+
+.sidebar .sidebarEnd ul li a:hover{
+    background-color: rgb(228, 228, 228);
+}
+
+.sidebar .sidebarEnd ul li a i{
+    padding-left: 15px;
+    padding-right: 20px;
+}
+
+.sidebar .sidebarEnd p {
+    color:rgb(148, 148, 148);
+    text-align: center;
+    font-size: 12px;
+    vertical-align:middle;
+}
+
+/* sidebar for mobiles (phones, 600px and down) */
+@media only screen and (max-width: 886px) {
+    .sidebar{
+        width:10%;
+    }
+
+    .links_name{
+        display: none;
+    }
+
+    .sidebarLogo a img { /* to resize the logo*/
+        width: 55px;
+        height: 55px;
+    }
+
+    .sidebar ul li a i{
+        padding: 0;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+
+    .sidebar .sidebarEnd ul li a i{
+        padding-left: 10px;
+        padding-right: 0px;
+    }
+
+    .sidebar .sidebarEnd p {
+        font-size: 7px;
+    }
+  }
+
+
+/* -------------------------------------- HELP button -------------------------------------- */
+.helpBtn {
+    background-color: white;
+    text-align: center;
+    font-size: 20px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    margin: 30px;
+    box-shadow: 0 5px 8px 0.2px rgba(165, 165, 165, 0.3);
+    border-radius: 50%;
+    border: 0.5px solid rgb(238, 238, 238);
+}
+
+.helpBtn:hover{
+    transform: scale(1.1);
+}
+
+.helpBtn a div{
+    padding: 10px;
+    padding-top: 12px;
+    width: 55px;
+    height: 55px;
+
+}
+
+.helpBtn a {
+    text-decoration: none;
+    color: rgb(148, 148, 148);
+}
+
+.helpBtn a:hover{
+    color: rgb(112, 112, 112);
+}
+
+.list-group{
+    width: 200px;
+    position: fixed;
+    bottom: 100px;
+    left: 30px;
+    
+}
+
+.list-group a {
+    text-decoration: none;
+    color: rgb(148, 148, 148);;
+}
+
+#top{ /* to make round corner only on the top*/
+    border-radius: 10px 10px 0 0;
+}
+
+#bottom{ /* to make round corner only on the bottom*/
+    border-radius: 0 0 10px 10px;
+}
+
+.list-group-item{
+    border: 0.5px solid rgb(238, 238, 238);
+    box-shadow: 0 5px 8px 0.2px rgba(165, 165, 165, 0.3);
+    
+}
+
+.list-group-item:hover{
+    background-color: rgb(238, 238, 238);
+}
+
+.list-group i {
+    color: rgb(148, 148, 148);
+    font-size: 20px;
+    cursor: pointer;
+    margin-bottom: 8px;
+    background-color: white;
+    width: 25px;
+    height: 25px;
+    box-shadow: 0 5px 8px 0.2px rgba(165, 165, 165, 0.3);
+    border-radius: 50%;
+    border: 0.5px solid rgb(238, 238, 238);
+    text-align: center;
+    padding-top: 1px;
+    
+}
+
+
+
+/* -------------------------------------- HOME PAGE -------------------------------------- */
+
+.container{
+    padding: 50px 100px;
+    /* هذه السطرين عشان لما الأزارير تصير بشكل طولي وبحكم انه لها طول ثابت
+     راح تخرج عن حدود الكونتينر وتخرب شكل السايد بار ،، هذه السطرين ما تخليه يصير كذا ويسوي سكرول  */
+    height: 100vh;
+    overflow: scroll;
+}
+
+/* ...... HEADER ...... */
+.username{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.username p {
+    font-size:16px;
+    line-height: 0.5;
+}
+.username span{
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.profile{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.profileAvatar{
+    border-radius: 50%;
+    background-color: rgb(238, 238, 238);
+    width: 90px;
+    height: 90px;
+    background-image: url("../img/Default_user_avatar.png");
+    background-size: cover;
+
+}
+
+/* ...... the 4 buttons  ...... */
+
+.pageBtn{ /* pageBtn is a class for the 4 buttons in the main page */
+    border-radius: 12px;
+    background-color: rgb(238, 238, 238);
+    color: black;
+    padding: 14px 25px;
+    text-align: right;
+    text-decoration: none;
+    display: inline-block;
+    height: 200px;
+}
+
+.pageBtn:hover{
+    box-shadow: 0 5px 8px 0.2px rgba(165, 165, 165, 0.3);
+    transform: scale(1.05);
+    color: black;
+}
+
+.pageBtn i {
+    color: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 15px;
+    font-size: 50px;
+}
+
+.pageBtn span {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 20px;
+    font-size: 30px;
+    font-weight: bold;
+    color: rgb(54, 54, 54);
+}
+
+/* -------------------------------------- صفحة إنشاء مقطع صوتي -------------------------------------- */
+
+/* ...... The Textarea fiels  ...... */
+
+.TTStxt{
+    margin: 30px;
+    margin-bottom: 50px;
+    height: 300px;
+    padding: 20px;
+    border-radius: 12px;
+    vertical-align: top;
+    resize: none;
+    border: none;
+    box-shadow: 0 5px 12px 1.5px rgba(165, 165, 165, 0.5);
+}
+
+.TTStxt:focus{
+    outline: none; /* to remove the The default style of the browser (the blue outline) */
+}
+
+
+/* ...... The Select menu of the voices ...... */
+
+.selectListDiv{
+    border: none;
+    padding: 0;
+    /* Since we are using absolute property to position the arrows,
+    the outter div needs to have a relative property in it*/
+    position: relative;
+
+}
+
+.selectListDiv i { /* select menu down arrow */
+    position: absolute;
+    left: 15px;
+    bottom: 9px;
+    color: rgb(148, 148, 148);
+}
+
+.ttsVoice{
+    /* to remove the The default style of the browser */
+    -webkit-appearance: none; 
+    appearance: none;
+    -moz-appearance: none;
+
+    padding: 10px 12px;
+    color: rgb(148, 148, 148);
+    border-radius: 12px;
+    border: 0.3px solid rgb(148, 148, 148);
+    cursor: pointer;
+    width: 100%;
+
+}
+
+.ttsVoice:hover{
+    border: 1px solid rgb(148, 148, 148);
+}
+
+.ttsVoice:focus{
+    outline: none; /* to remove the The default style of the browser (the blue outline) */
+}
+
+/* ...... The TTS conversion button ...... */
+
+.convBtn{
+    /* to remove the The default style of the browser */
+    -webkit-appearance: none; 
+    appearance: none;
+    -moz-appearance: none;
+
+    background-color: #C4C4C4;
+    border-radius: 12px;
+    border: none;
+    padding: 10px 12px;
+}
+
+.convBtn:hover{
+    box-shadow: 0 5px 8px 0.2px rgba(165, 165, 165, 0.3);
+    transform: scale(1.02);
+}
+
+/* for mobiles (phones, 600px and down) */
+@media only screen and (max-width: 764px) {
+    .TTStxt{
+        margin-bottom: 35px;
+    }
+    .convBtn {
+        margin-top: 35px;
+  }
+}
+
+/* -------------------------------------- Voice cloning Page -------------------------------------- */
+
+.txtDiv {
+    margin: 30px;
+    height: 300px;
+    padding: 20px;
+    border-radius: 12px;
+    vertical-align: middle;
+    border: none;
+    box-shadow: 0 5px 12px 1.5px rgba(165, 165, 165, 0.5);
+}
+
+.vcInst { /* "vc" means: voice cloning, class for the voice cloning Instruction */ 
+    color: rgb(148, 148, 148);
+    margin: 10px;
+
+}
+
+.vcTxt { /* "vc" means: voice cloning, class for the voice cloning Text to read */ 
+    color:black;
+    padding: 30px;
+    text-align: center;
+}
+
+.recBtn{ /* class for the Recording button */
+    /* to remove the The default style of the browser */
+    -webkit-appearance: none; 
+    appearance: none;
+    -moz-appearance: none;
+
+    background-color: #C4C4C4;
+    border-radius: 12px;
+    border: none;
+    padding: 12px 20px;
+    width: 25%;
+}
+
+.recBtn:hover{
+    box-shadow: 0 5px 8px 0.2px rgba(165, 165, 165, 0.3);
+    transform: scale(1.02);
+}
+
+@media only screen and (max-width: 764px) {
+    .recBtn {
+        width: 100%;
+  }
+}
+
+.progressTxt{
+    font-size: 12px;
+    color: rgb(148, 148, 148);
+    margin: 10px;
+    margin-top: 25px;
+}
+
+.progressBar{
+    width: 100%;
+    height: 0.5em;
+    background-color: rgb(228, 228, 228) ;
+    border-radius: 0.5em;
+    position: relative;
+}
+
+.progressBar::after{
+    content: '';
+    display: flex;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    background-color: #C4C4C4;
+    border-radius: 0.5em;
+    min-width: 1%;
+    max-width: 100%;
+    /* to Adjust the width of the progress from HTML file via the Attribute style="--width: ;"> */
+    width: calc(var(--width,0)*1%); 
+}
+/* -------------------------------------- Contact Us page -------------------------------------- */
+
+.fullHeight{
+    height: 100vh;
+    text-align: center;
+}
+
+/* ............ IMAGE side (left) ............ */
+
+.imgSide {
+    width: 100%;
+    height: 100%;
+    background-color: rgb(238, 238, 238);
+    text-align: center;
+    /* these 2 Properties to center the image verticly, 
+    Because bootstrap "align-items-center" did not work on this side*/
+    display:flex;
+    align-items:center;
+}
+
+.imgSide img {
+    width: 100%;
+}
+
+@media only screen and (max-width: 764px) {
+    .imgSide {
+        display: none;
+  }
+}
+
+/* ............ FORM side (right) ............ */
+
+.contactForm{ /*This is used to the form side of "contact us" page and "login" page*/
+    height: 100%;
+    padding: 100px 120px;
+    text-align: center;
+    overflow: scroll;
+    line-height: 20px;
+}
+
+.contactForm h1 {
+    margin-bottom: 50px;
+}
+/* to change the color of the placeholder */
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: rgb(148, 148, 148);
+    opacity: 1; /* Firefox */
+  }
+  
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: rgb(148, 148, 148);
+  }
+  
+  ::-ms-input-placeholder { /* Microsoft Edge */
+    color: rgb(148, 148, 148);
+  }
+
+/* ...... (1) عنوان الرسالة + (4) البريد الإلكتروني  ...... */
+
+.issueInput {
+    /* to remove the The default style of the browser */
+    -webkit-appearance: none; 
+    appearance: none;
+    -moz-appearance: none;
+    
+    width: 100%;
+    padding: 10px 12px;
+    color: rgb(148, 148, 148);
+    border: none;
+    border-radius: 0;
+    border-bottom: 1px solid rgb(0, 0, 0);
+    margin-bottom: 50px;
+}
+
+.issueInput:focus{
+    outline: none; /* to remove the The default style of the browser (the blue outline) */
+}
+
+/* ...... (2) نوع القضية أو المسألة ...... */
+
+.selectIssueDiv{
+    border: none;
+    padding: 0;
+    margin-bottom: 30px;
+    /* Since we are using absolute property to position the arrows,
+    the outter div needs to have a relative property in it*/
+    position: relative;
+
+}
+
+.selectIssueDiv i { /* select menu down arrow */
+    position: absolute;
+    left: 15px;
+    bottom: 9px;
+    color: rgb(0, 0, 0)
+}
+
+.issue{
+    /* to remove the The default style of the browser */
+    -webkit-appearance: none; 
+    appearance: none;
+    -moz-appearance: none;
+
+    padding: 10px 12px;
+    color: rgb(148, 148, 148);
+    border: none;
+    border-radius: 0;
+    border-bottom: 1px solid rgb(0, 0, 0);
+    cursor: pointer;
+    width: 100%;
+
+}
+
+.issue:focus{
+    outline: none; /* to remove the The default style of the browser (the blue outline) */
+}
+
+/* ...... (3) الرسالة ...... */
+
+.issueMsg{
+    /* to remove the The default style of the browser */
+    -webkit-appearance: none; 
+    appearance: none;
+    -moz-appearance: none;
+    
+    width: 100%;
+    padding: 10px 12px;
+    color: rgb(148, 148, 148);
+    border: none;
+    border-radius: 0;
+    border-bottom: 1px solid rgb(0, 0, 0);
+    margin-bottom: 50px;
+    vertical-align: bottom;
+}
+
+.issueMsg::placeholder {
+    text-align:right;
+    transform: translateY(20px);
+  }
+
+.issueMsg:focus{
+    outline: none; /* to remove the The default style of the browser (the blue outline) */
+}
+
+/* ...... (5) إرسال ...... */
+
+.sendIssue{
+    /* to remove the The default style of the browser */
+    -webkit-appearance: none; 
+    appearance: none;
+    -moz-appearance: none;
+
+    background-color: #000000;
+    color: white;
+    border-radius: 10px;
+    border: none;
+    padding: 15px;
+    width: 30%;
+    
+}
+
+@media only screen and (max-width: 764px) {
+    .sendIssue {
+        width: 100%;
+  }
+}
+
+/* -------------------------------------- FAQs Page -------------------------------------- */
+
+.FAQ-root-col{
+    text-align: center;
+}
+
+.FAQ-root-col h1 {
+    font-size: 50px;
+    margin: 20px;
+    margin-bottom: 40px;
+}
+
+.QA-outer{
+    width: 100%;
+    background-color: #FAF8F8;
+    margin: 15px 0;
+    cursor: pointer;
+
+}
+
+.QusetionDiv {
+    text-align: right;
+    padding: 15px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+
+.AnswerDiv{
+    text-align: right;
+    padding: 15px;
+}
+
+
+.QusetionDiv::after{
+    content: '\2212';
+    width: 35px;
+    font-size: 25px;
+    font-weight:normal;
+    text-align: center;
+    float: left;
+}
+
+.QusetionDiv.collapsed::after{
+    content: "\002B";
+    font-weight:normal;
+}
+
+/* -------------------------------------- Login Page -------------------------------------- */
+
+.txtInput{
+    padding: 10px 12px;
+    border-radius: 12px;
+    border: 0.3px solid rgb(148, 148, 148);
+    cursor: pointer;
+    width: 100%;
+}
+
+.txtInput:hover{
+    border: 1px solid rgb(148, 148, 148);
+}
+
+.inputLabel {
+    text-align: right; 
+    color:black;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    margin-right: 5px;
+}
+
+.forgestPass{
+    width: 100%;
+    text-align: right; 
+    text-decoration: underline;
+    margin-top: 10px;
+    margin-right: 5px;
+}
+
+.logBtn{
+    background-color: rgb(148, 148, 148);
+    color: white;
+    border: 0.3px solid rgb(148, 148, 148);
+    border-radius: 12px;
+    padding: 10px 12px;
+    margin-top: 40px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.logBtn:hover{
+    box-shadow: 0 5px 8px 0.2px rgba(165, 165, 165, 0.3);
+    transform: scale(1.02);
+}
+
+.logSwitch{
+    text-decoration: underline;
+}
+
+/* -------------------------------------- Create Account Page -------------------------------------- */
+
+.createAcountForm{ /*This is used to the form side of "contact us" page and "login" page*/
+    height: 100%;
+    padding: 50px 120px;
+    text-align: center;
+    overflow: scroll;
+    line-height: 20px;
+}
+
+.creatAcountHeder{
+    text-align: center;
+    margin: 0 !important;
+}
+
+/* -------------------------------------- Profile Page -------------------------------------- */
+
+.profileLabel{
+    text-align: right; 
+    color:rgb(148, 148, 148);
+    margin-top: 20px;
+    margin-bottom: 10px;
+    margin-right: 5px;
+}
+
+.profileInput{
+    padding: 10px 12px;
+    border-radius: 12px;
+    border: 0.3px solid rgb(148, 148, 148);
+    cursor: pointer;
+    width: 100%;
+}
+
+.profileInput:hover{
+    border: 1px solid rgb(148, 148, 148);
+}
+
+/* to change the color of the placeholder */
+.profileInput::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: black;
+    opacity: 1; /* Firefox */
+  }
+  
+  .profileInput:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color:black;
+  }
+  
+  .profileInput::-ms-input-placeholder { /* Microsoft Edge */
+    color: black;
+  }
+
+
+
+.clonedVoiceSample{
+    color: black;
+    padding: 10px 12px;
+    margin-top: 20px;
+    display: flex;
+}
+
+.clonedVoiceSample:hover {
+    text-decoration: none;
+}
+
+.clonedVoiceSample i {
+    padding-left: 15px;
+}
+
+.editBtn{
+    background-color: rgb(148, 148, 148);
+    color: white;
+    border: 0.3px solid rgb(148, 148, 148);
+    border-radius: 12px;
+    padding: 10px 12px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 20px ;
+}

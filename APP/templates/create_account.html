@@ -1,0 +1,112 @@
+{% extends "base.html" %}
+{% block title %}
+إنشاءحساب - وَتَر
+{% endblock %}
+
+{% block content %}
+<div class="container-fluide">
+    <div class="row align-items-center fullHeight">
+
+        <!------------  The Form Side (right)------------>
+        <div class="col-md-8 createAcountForm">
+            <form action="" target="_self" autocomplete="on">
+
+                <h1 class="creatAcountHeder">إنشاء حساب جديد</h1><br>
+
+                <!-- 1) الاسم + اسم المستخدم-->
+                <div class="row">
+                    <div class="col-md-6">
+                        <p class="inputLabel">الاسم</p>
+                        <input class="txtInput" type="text" required>
+                    </div>
+
+                    <div class="col-md-6">
+                        <p class="inputLabel">اسم المستخدم</p>
+                        <input class="txtInput" type="text" required>
+                    </div>
+                </div>
+
+                <!-- 2) البريد الإلكتروني-->
+                <p class="inputLabel">البريد الإلكتروني</p>
+                <input class="txtInput" type="email" required>
+
+                <!-- 3) كلمة المرور-->
+                <p class="inputLabel">كلمة المرور</p>
+                <input class="txtInput" type="password" required>
+
+                <!-- 4) تأكيد كلمة المرور-->
+                <p class="inputLabel">تأكيد كلمة المرور </p>
+                <input class="txtInput" type="password" required>
+
+                <!-- 5) كلمة المرور-->
+                <p class="inputLabel">رقم الهاتف </p>
+                <input class="txtInput" type="tel" placeholder="+966" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}-[0-9]{4}"
+                    dir="ltr" required>
+
+                <!-- 6) البلد -->
+                <p class="inputLabel">البلد</p>
+                <div class="selectListDiv">
+                    <i class="material-icons-outlined">expand_more</i>
+                    <select class="ttsVoice" name="" id="" required>
+                        <option value="">الأردن</option>
+                        <option value="">الإمارات</option>
+                        <option value="">البحرين</option>
+                        <option value="">تونس</option>
+                        <option value="">الجزائر</option>
+                        <option value="">جزر القمر</option>
+                        <option value="">جيبوتي</option>
+                        <option value="" selected>السعودية</option>
+                        <option value="">السودان</option>
+                        <option value="">سوريا</option>
+                        <option value="">الصومال</option>
+                        <option value="">العراق</option>
+                        <option value="">عمان</option>
+                        <option value="">فلسطين</option>
+                        <option value="">قطر</option>
+                        <option value="">الكويت</option>
+                        <option value="">لبنان</option>
+                        <option value="">ليبيا</option>
+                        <option value="">مصر</option>
+                        <option value="">المغرب</option>
+                        <option value="">موريتانيا</option>
+                        <option value="">اليمن</option>
+                    </select>
+                </div>
+
+                <!-- 7) الجنس + تاريخ الميلاد -->
+                <div class="row">
+
+                    <div class="col-md-6">
+                        <p class="inputLabel">الجنس</p>
+                        <div class="selectListDiv">
+                            <i class="material-icons-outlined">expand_more</i>
+                            <select class="ttsVoice" required>
+                                <option value="female">أنثى</option>
+                                <option value="male">ذكر</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <p class="inputLabel">تاريخ الميلاد</p>
+                        <input class="txtInput" type="date" required>
+                    </div>
+                </div>
+
+                <!-- 8) زر إنشاء حساب -->
+                <button type="submit" class="logBtn">إنشاء حساب</button>
+
+                <!-- 9) االتبديل إلى صفحة تسجيل الدخول -->
+                <span>لديك حساب؟</span>
+                <a class="logSwitch" href={{ url_for('login') }} target="_self">سجّل الدخول</a>
+            </form>
+        </div>
+
+        <!------------  The Image Side (left): hidden in mobile version ------------>
+        <div class="col-md-4 imgSide">
+            <img src={{url_for('static',filename='img/Watar.png' )}} alt="WATAR">
+        </div>
+
+    </div>
+</div>
+{% endblock %}

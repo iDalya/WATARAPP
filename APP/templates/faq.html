@@ -1,0 +1,101 @@
+{% extends "base.html" %}
+{% block title %}
+الأسئلة الشائعة - وَتَر
+{% endblock %}
+
+{% block content %}
+
+<div class="container">
+    <div class="row align-items-center">
+        <div class="col-12 FAQ-root-col">
+
+            <h1>الأسئلة الشائعة </h1>
+
+            <!-- Outter ROOT div that will contain all the questions
+                         it is needed to make "accordion" collapse so when one question opens the others closes -->
+            <div id="accordionParent">
+
+                <!----------- Q&A (1) ----------->
+                <div class="QA-outer">
+
+                    <!-- the Qustion -->
+                    <div class="QusetionDiv collapsed" data-toggle="collapse" data-target="#Answer1">
+                        أبجد هوز حطي كلمن سعفص قرشت ؟
+                    </div>
+
+                    <!-- the Answer -->
+                    <div id="Answer1" class="collapse" data-parent="#accordionParent">
+                        <!-- this extar Div is needed to make the transition smooth-->
+                        <div class="AnswerDiv">
+                            أبجد هوز حطي كلمن سعفص قرشت ثخذ ضظغأبجد هوز حطي كلمن سعفص قرشت ثخذ ضظغ
+                            أبجد هوز حطي كلمن سعفص قرشت ثخذ ضظغأبجد هوز حطي كلمن سعفص قرشت ثخذ ضظغ
+                        </div>
+                    </div>
+
+                </div>
+
+                <!----------- Q&A (2) ----------->
+                <div class="QA-outer">
+
+                    <!-- the Qustion -->
+                    <div class="QusetionDiv collapsed" data-toggle="collapse" data-target="#Answer2">
+                        أبجد هوز حطي كلمن سعفص قرشت ؟
+                    </div>
+
+                    <!-- the Answer -->
+                    <div id="Answer2" class="collapse" data-parent="#accordionParent">
+                        <!-- this extar Div is needed to make the transition smooth-->
+                        <div class="AnswerDiv">
+                            أبجد هوز حطي كلمن سعفص قرشت ثخذ ضظغأبجد هوز حطي كلمن سعفص قرشت ثخذ ضظغ
+                            أبجد هوز حطي كلمن سعفص قرشت ثخذ ضظغأبجد هوز حطي كلمن سعفص قرشت ثخذ ضظغ
+                        </div>
+                    </div>
+
+                </div>
+
+                <!----------- Q&A (3) ----------->
+                <div class="QA-outer">
+
+                    <!-- the Qustion -->
+                    <div class="QusetionDiv collapsed" data-toggle="collapse" data-target="#Answer3">
+                        أبجد هوز حطي كلمن سعفص قرشت ؟
+                    </div>
+
+                    <!-- the Answer -->
+                    <div id="Answer3" class="collapse" data-parent="#accordionParent">
+                        <!-- this extar Div is needed to make the transition smooth-->
+                        <div class="AnswerDiv">
+                            أبجد هوز حطي كلمن سعفص قرشت ثخذ ضظغأبجد هوز حطي كلمن سعفص قرشت ثخذ ضظغ
+                            أبجد هوز حطي كلمن سعفص قرشت ثخذ ضظغأبجد هوز حطي كلمن سعفص قرشت ثخذ ضظغ
+                        </div>
+                    </div>
+
+                </div>
+
+                <!----------- Q&A (4) ----------->
+                <div class="QA-outer">
+
+                    <!-- the Qustion -->
+                    <div class="QusetionDiv collapsed" data-toggle="collapse" data-target="#Answer4">
+                        أبجد هوز حطي كلمن سعفص قرشت ؟
+                    </div>
+
+                    <!-- the Answer -->
+                    <div id="Answer4" class="collapse" data-parent="#accordionParent">
+                        <!-- this extar Div is needed to make the transition smooth-->
+                        <div class="AnswerDiv">
+                            أبجد هوز حطي كلمن سعفص قرشت ثخذ ضظغأبجد هوز حطي كلمن سعفص قرشت ثخذ ضظغ
+                            أبجد هوز حطي كلمن سعفص قرشت ثخذ ضظغأبجد هوز حطي كلمن سعفص قرشت ثخذ ضظغ
+                        </div>
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div> <!-- outer col-12 root -->
+    </div> <!-- outer row root -->
+</div> <!-- container div -->
+
+{% endblock %}

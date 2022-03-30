@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% block title %}
+تواصل معنا - وَتَر
+{% endblock %}
+
+{% block content %}
+
+<div class="container-fluid">
+    <div class="row align-items-center fullHeight">
+        <!---------- Form side ---------->
+        <div class="col-md-8 contactForm">
+
+            <h1>تواصل معنا</h1>
+
+            <form action="">
+
+                <!-- 1) عنوان الرسالة -->
+                <input type="text" placeholder="عنوان الرسالة " class="issueInput"><br>
+
+                <!-- 2) نوع القضية أو المسألة -->
+                <div class="selectIssueDiv">
+                    <i class="material-icons-outlined">expand_more</i>
+                    <select name="voice" class="issue">
+                        <option disabled selected>نوع المسألة أو القضية </option>
+                        <option value="">استفسار</option>
+                        <option value="">شكوى</option>
+                    </select>
+                </div>
+
+                <!-- 3) نص الرسالة -->
+                <textarea placeholder="الرسالة" class="issueMsg"></textarea>
+
+                <!-- 4) البريد الإلكترني-->
+                <input type="email" placeholder="البريد الإلكتروني" class="issueInput"><br>
+
+                <!-- 5) إرسال -->
+                <button type="submit" class="sendIssue"> إرسال</button>
+
+            </form>
+
+        </div>
+
+        <!---------- Image side (it should be hidden in mobile version) ---------->
+        <div class="col-md-4 imgSide">
+            <img src={{url_for('static',filename='img/Watar.png' )}} alt="WATAR">
+        </div>
+    </div>
+</div>
+{% endblock %}

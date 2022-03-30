@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% block title %}
+تسجيل الدخول - وَتَر
+{% endblock %}
+
+{% block content %}
+
+<div class="container-fluide">
+    <div class="row align-items-center fullHeight">
+
+        <!------------  The Form Side (right)------------>
+        <div class="col-md-8 contactForm">
+
+            <form action="" target="_self" autocomplete="on">
+
+                <h1>تسجيل الدخول</h1><br>
+
+                <!-- 1) البريد الإلكتروني -->
+                <p class="inputLabel">البريد الإلكتروني</p>
+                <input class="txtInput" type="email" required>
+
+                <!-- 2) كلمة المرور -->
+                <p class="inputLabel">كلمة المرور</p>
+                <input class="txtInput" type="password" required>
+
+                <!-- 3) هل نسيت كلمة المرور -->
+                <p class="forgestPass"><a href="reset_password.html" target="_self">هل نسيت كلمة المرور؟</a></p>
+
+                <!-- 4) زر تسجيل الدخول -->
+                <button class="logBtn" type="submit">تسجيل الدخول</button><br>
+
+                <!-- 5) االتبديل إلى صفحة إنشاء حساب -->
+                <span>لا تمتلك حساب؟</span>
+                <a class="logSwitch" href= {{ url_for('create_account')}} target="_self">إنشاء حساب جديد</a>
+
+            </form>
+
+        </div>
+
+        <!------------  The Image Side (left): hidden in mobile version ------------>
+        <div class="col-md-4 imgSide">
+            <img src={{url_for('static',filename='img/Watar.png' )}}>
+        </div>
+
+    </div>
+</div>
+
+{% endblock %}

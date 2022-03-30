@@ -1,0 +1,172 @@
+{% extends "base.html" %}
+  {% block title %}
+  انسخ صوتك - وَتَر
+  {% endblock %}
+
+  {% block content %}
+
+
+  <div class="wrapper">
+    <!-- the while page is inside it -->
+
+    <!----------------------------------------------- Sidebar ----------------------------------------------->
+    <!-- div For the ENTIRE sidebar -->
+    <nav class="sidebar">
+      <!-- div for the header (LOGO) of the sidebar -->
+      <div class="">
+        <div class="sidebarLogo">
+          <!-- CSS class -->
+          <a href={{ url_for('index') }}><img src={{url_for('static',filename='img/Watar.png' )}} alt="وتر"></a>
+        </div>
+      </div>
+
+      <!-- div for the content of the sidebar -->
+      <ul>
+
+        <li>
+          <a class="nav-link" href={{ url_for('index') }}>
+            <i class="material-icons-outlined">home</i> <!-- Google class -->
+            <span class="links_name"> الصفحة الرئيسية</span> <!-- CSS class -->
+          </a>
+        </li>
+
+        <li>
+          <a class="nav-link" href={{ url_for('tts') }}>
+            <i class="material-icons-outlined">add</i>
+            <span class="links_name"> إنشاء مقطع صوتي</span>
+          </a>
+        </li>
+
+        <li>
+          <a class="nav-link" id="active" href={{ url_for('voice_cloning') }}>
+            <i class="material-icons-outlined">record_voice_over</i>
+            <span class="links_name"> انسخ صوتك</span>
+          </a>
+        </li>
+
+        <li>
+          <a class="nav-link" href="#">
+            <i class="material-icons-outlined">volume_up</i>
+            <span class="links_name"> تصفح معرض الأصوات</span>
+          </a>
+        </li>
+
+        <li>
+          <a class="nav-link" href="#">
+            <i class="material-icons-outlined">favorite_border</i>
+            <span class="links_name"> الأصوات المفضلة</span>
+          </a>
+        </li>
+
+        <li>
+          <a class="nav-link" href={{ url_for('profile') }}>
+            <i class="material-icons-outlined">person_outline</i>
+            <span class="links_name"> الملف الشخصي</span>
+          </a>
+        </li>
+
+      </ul>
+
+      <!-- div for the end (logout) of the sidebar -->
+
+      <div class="sidebarEnd">
+
+        <ul>
+          <li>
+            <a class="nav-link" href="#">
+              <i class="material-icons-outlined">logout</i> <!-- Google class -->
+              <span class="links_name"> تسجيل الخروج</span> <!-- CSS class -->
+            </a>
+          </li>
+        </ul>
+
+        <p>
+          Copyright &copy; WATAR
+          <script>document.write(new Date().getFullYear());</script>
+        </p>
+      </div>
+
+    </nav>
+
+    <!-----------------------------------------------  page content ----------------------------------------------->
+    <!-- container for the padding -->
+    <div class="container">
+
+      <!-------- HEADER -------->
+      <div class="row justify-content-between" style="height: 15%;">
+        <!-- the right side -->
+        <div class="col-6">
+          <div class="username">
+            <p> أهلًا وسهلًا </p>
+            <span> فاطمة جبر </span>
+          </div>
+        </div>
+        <!-- the left side -->
+        <div class="col-6">
+          <div class="profile">
+            <a href={{ url_for('profile') }}>
+              <div class="profileAvatar">
+              </div>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-------- ROOT row for the content under the HEADER -------->
+      <div class="row align-items-center" style="height: 85%; ">
+        <!-- it has one column that will nest other 3 rows-->
+        <div class="col-12">
+
+          <!-- 1st nested row: for Text div-->
+          <div class="row  justify-content-center">
+            <div class="col-12 txtDiv">
+              <div class="row justify-content-center vcInst">
+                سجل صوتك أثناء قراءة النص التالي :
+              </div>
+              <div class="row justify-content-center vcTxt">
+                أبجد هوز حطي كلمن سعفص قرشت ثخذ ضظغأبجد هوز حطي كلمن سعفص قرشت ثخذ ضظغ
+                أبجد هوز حطي كلمن سعفص قرشت ثخذ ضظغأبجد هوز حطي كلمن سعفص قرشت ثخذ ضظغ
+              </div>
+            </div>
+          </div>
+
+          <!-- 2nd nested row: for the Recording button-->
+          <div class="row  justify-content-center">
+            <button class="recBtn"> بدء التسجيل </button>
+          </div>
+
+          <!-- 3rd nested row: for the Progress bar-->
+          <div class="row  justify-content-center">
+            <p class="progressTxt">لقد سجلت ٣ من أصلا ١٠٠ تسجيلات (٣٪) </p>
+            <div class="progressBar" style="--width: 10;"></div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-------- HELP button -------->
+      <div class="helpBtn" data-toggle="collapse" data-target="#helpOpt">
+        <a href="#">
+          <div>
+            ؟
+          </div>
+        </a>
+      </div>
+
+      <ul class="collapse list-group" id="helpOpt">
+        <i class="material-icons-outlined" data-toggle="collapse" data-target="#helpOpt">close</i>
+        <a href={{ url_for('faq') }} id="top">
+          <li class="list-group-item">الأسئلة الشائعة</li>
+        </a>
+        <a href={{ url_for('login') }} id="bottom">
+          <li class="list-group-item">تواصل معنا</li>
+        </a>
+      </ul>
+
+    </div>
+
+  </div>
+
+
+{% endblock %}
