@@ -15,26 +15,26 @@
             <form action="">
 
                 <!-- 1) عنوان الرسالة -->
-                <input type="text" placeholder="عنوان الرسالة " class="issueInput"><br>
+                <input type="text" name="subject" placeholder="عنوان الرسالة " class="issueInput"><br>
 
                 <!-- 2) نوع القضية أو المسألة -->
                 <div class="selectIssueDiv">
                     <i class="material-icons-outlined">expand_more</i>
-                    <select name="voice" class="issue">
+                    <select name="issue" class="issue">
                         <option disabled selected>نوع المسألة أو القضية </option>
-                        <option value="">استفسار</option>
-                        <option value="">شكوى</option>
+                        <option value="enquiry">استفسار</option>
+                        <option value="complaint">شكوى</option>
                     </select>
                 </div>
 
                 <!-- 3) نص الرسالة -->
-                <textarea placeholder="الرسالة" class="issueMsg"></textarea>
+                <textarea name="issueMsg" placeholder="الرسالة" class="issueMsg"></textarea>
 
                 <!-- 4) البريد الإلكترني-->
-                <input type="email" placeholder="البريد الإلكتروني" class="issueInput"><br>
+                <input type="email" name="email" placeholder="البريد الإلكتروني" class="issueInput"><br>
 
                 <!-- 5) إرسال -->
-                <button type="submit" class="sendIssue"> إرسال</button>
+                <button type="submit" name="submit" class="sendIssue"> إرسال</button>
 
             </form>
 
