@@ -1,6 +1,7 @@
 from APP import app
 from flask import render_template
 
+from flask_wtf import FlaskForm
 
 @app.route('/index')
 @app.route('/home')
