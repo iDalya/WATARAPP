@@ -122,34 +122,34 @@
                         <!-- 1) الاسم -->
                         <div class="col-md-6">
                             <p class="profileLabel">الاسم</p>
-                            <input class="profileInput" type="text" required placeholder="فاطمة">
+                            <input class="profileInput" type="text" name="name" required placeholder="فاطمة">
                         </div>
 
                         <!-- 2) اسم المستخدم -->
                         <div class="col-md-6">
                             <p class="profileLabel">اسم المستخدم</p>
-                            <input class="profileInput" type="text" required placeholder="nerd2030">
+                            <input class="profileInput" type="text" name="username" required placeholder="nerd2030">
                         </div>
                     </div>
 
                     <!-- 3) البريد الإلكتروني -->
                     <p class="profileLabel">البريد الإلكتروني</p>
-                    <input class="profileInput" type="email" required placeholder="fatimah@uqu.sa">
+                    <input class="profileInput" type="email" name="email" required placeholder="fatimah@uqu.sa">
 
                     <!-- 4) كملة المرور -->
                     <p class="profileLabel">كلمة المرور</p>
-                    <input class="profileInput" type="password" required placeholder="************">
+                    <input class="profileInput" type="password" name="password" required placeholder="************">
 
                     <!-- 5) رقم الهاتف -->
                     <p class="profileLabel"> رقم الهاتف </p>
-                    <input class="profileInput" type="tel" placeholder="0561455960"
+                    <input class="profileInput" type="tel" name="phone" placeholder="0561455960"
                         pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}-[0-9]{4}" required>
 
                     <!-- 6) البلد -->
                     <p class="profileLabel">البلد</p>
                     <div class="selectListDiv">
                         <i class="material-icons-outlined">expand_more</i>
-                        <select class="ttsVoice" name="" id="" required>
+                        <select class="ttsVoice" name="country" id="" required>
                             <option value="" selected>السعودية</option>
                             <option value="">الأردن</option>
                             <option value="">الإمارات</option>
@@ -181,7 +181,7 @@
                             <p class="profileLabel">الجنس</p>
                             <div class="selectListDiv">
                                 <i class="material-icons-outlined">expand_more</i>
-                                <select class="ttsVoice" required>
+                                <select class="ttsVoice" name="gender" required>
                                     <option value="female">أنثى</option>
                                     <option value="male">ذكر</option>
                                 </select>
@@ -191,7 +191,7 @@
                         <div class="col-md-6">
                             <div class="form-group">
                                 <p class="profileLabel"> تاريخ الميلاد</p>
-                                <input class="profileInput" type="date" id="birthday" name="" required>
+                                <input class="profileInput" type="date" name="birthdate" id="birthday" name="" required>
                             </div>
                         </div>
                     </div>
@@ -207,7 +207,7 @@
 
                         <!-- 10) زر لتعديل معلومات الحساب  -->
                         <div class="col-md-6">
-                            <button type="submit" class="editBtn">تعديل الملف الشخصي </button>
+                            <button type="submit" name="submit" class="editBtn">تعديل الملف الشخصي </button>
                         </div>
 
                     </div>

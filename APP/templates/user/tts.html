@@ -112,32 +112,32 @@
       
             <!-------- ROOT Div for the [text field, voices list and conversion button] -------->
             <form action="" method="">
-                <div class="row align-items-center" style="height: 85%; ">
-                    <!-- it has one column that will nest the other 2 rows-->
-                    <div class="col-12">
-              
-                          <!-- 1st nested row for the [text field]-->
-                        <div class="row  justify-content-center " >
-                            <textarea name="TTStxt" placeholder="أدخل النص هنا .." class="col-12 TTStxt"></textarea>
-                        </div>
+              <div class="row align-items-center" style="height: 85%; ">
+                  <!-- it has one column that will nest the other 2 rows-->
+                  <div class="col-12">
+            
+                        <!-- 1st nested row for the [text field]-->
+                      <div class="row  justify-content-center " >
+                          <textarea name="TTStxt" placeholder="أدخل النص هنا .." class="col-12 TTStxt"></textarea>
+                      </div>
 
-                        <!-- 2nd nested row for the [voices list and conversion button]]-->
-                        <div class="row  justify-content-between" >
-                            <!-- This outter div wrap the select menu and helps in addind the down arrow icons-->
-                            <div class="selectListDiv col-md-7">
-                                <i class="material-icons-outlined">expand_more</i>
-                                <select name="voice" class="ttsVoice"> 
-                                    <option disabled selected>اختر صوت من قائمة المفضلة </option> 
-                                    <option value="">سارة (أنثى)</option> 
-                                    <option value="">محمد (ذكر)</option> 
-                                    <option value="">عمر (طفل)</option>
-                                </select>
-                            </div>
-                            <button type="submit" class="col-md-4 convBtn"> تحويل النص إلى صوت</button>
-                        </div>
-                    </div>
-                </div>
-            </form>
+                      <!-- 2nd nested row for the [voices list and conversion button]]-->
+                      <div class="row  justify-content-between" >
+                          <!-- This outter div wrap the select menu and helps in addind the down arrow icons-->
+                          <div class="selectListDiv col-md-7">
+                              <i class="material-icons-outlined">expand_more</i>
+                              <select name="voice" class="ttsVoice"> 
+                                  <option disabled selected>اختر صوت من قائمة المفضلة </option> 
+                                  <option value="">سارة (أنثى)</option> 
+                                  <option value="">محمد (ذكر)</option> 
+                                  <option value="">عمر (طفل)</option>
+                              </select>
+                          </div>
+                          <button type="submit" class="col-md-4 convBtn"> تحويل النص إلى صوت</button>
+                      </div>
+                  </div>
+              </div>
+          </form>
       
             <!-------- HELP button -------->
             <div class="helpBtn" data-toggle="collapse" data-target="#helpOpt" >
