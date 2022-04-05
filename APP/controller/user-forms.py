@@ -1,11 +1,13 @@
-import App
+from APP import app
 from flask import Flask,session
+import APP
 from flask_wtf import FlaskForm
 from wtforms import StringField,SubmitField,SelectField,TextAreaField,EmailField,PasswordField,TelField,DateField
 from wtforms.validators import DataRequired
 
-App.app.config['SECRET_KEY'] = 'mysecretkey'
+APP.app.config['SECRET_KEY'] = 'mysecretkey'
 #contact us form
+
 class ContactUsForm(FlaskForm):
     subject = StringField() #type text , placeholder
     issue = SelectField("",choices=[('',''),('enquiry','استفسار'),('complaint','شكوى')])
@@ -69,4 +71,4 @@ def handle_TTSform():
         return ''
 
 if __name__ == '__main__':
-    App.app.run(debug=True)
+    APP.app.run(debug=True)
