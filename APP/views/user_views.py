@@ -44,7 +44,7 @@ def profile():
 
 
 @app.route('/edit_profile',methods=["GET", "POST"])
-def profile():
+def edit_profile():
     if request.method == "POST":
         req = request.form
         #print(req)
