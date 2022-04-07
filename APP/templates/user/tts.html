@@ -13,7 +13,7 @@
       <!-- div for the header (LOGO) of the sidebar -->
       <div class="">
         <div class="sidebarLogo"> <!-- CSS class -->
-          <a href={{ url_for('index') }}><img src={{url_for('static',filename='img/Watar.png' )}} alt="وتر" ></a>
+          <a href="/index"><img src={{url_for('static',filename='img/Watar.png' )}} alt="وتر" ></a>
         </div>
       </div>
 
@@ -21,21 +21,21 @@
       <ul >
         
         <li >
-          <a class="nav-link"  href={{ url_for('index') }}>
+          <a class="nav-link"  href="/index">
             <i class="material-icons-outlined">home</i> <!-- Google class -->
             <span class="links_name"> الصفحة الرئيسية</span> <!-- CSS class -->
           </a>
         </li>
 
         <li>
-          <a class="nav-link" id="active" href={{ url_for('tts') }}>
+          <a class="nav-link" id="active" href="/tts">
             <i class="material-icons-outlined">add</i>
             <span class="links_name"> إنشاء مقطع صوتي</span>
           </a>
         </li>
 
         <li>
-          <a class="nav-link" href={{ url_for('voice_cloning') }}>
+          <a class="nav-link" href="/voice_cloning">
             <i class="material-icons-outlined">record_voice_over</i>
             <span class="links_name"> انسخ صوتك</span>
           </a>
@@ -56,7 +56,7 @@
         </li>
 
         <li>
-          <a class="nav-link" href={{ url_for('profile') }}>
+          <a class="nav-link" href="/profile">
             <i class="material-icons-outlined">person_outline</i>
             <span class="links_name"> الملف الشخصي</span>
           </a>
@@ -101,7 +101,7 @@
               <!-- the left side -->
               <div class="col-6">
                 <div class="profile">
-                  <a href={{ url_for('profile') }}>
+                  <a href="/profile">
                     <div class="profileAvatar">
                     </div>
                   </a>
@@ -150,8 +150,8 @@
       
             <ul class="collapse list-group" id="helpOpt">
               <i class="material-icons-outlined" data-toggle="collapse" data-target="#helpOpt">close</i>
-              <a href={{ url_for('faq') }} id="top"> <li class="list-group-item">الأسئلة الشائعة</li></a>
-              <a href={{ url_for('login') }} id="bottom"><li class="list-group-item">تواصل معنا</li></a>
+              <a href="/faq" id="top"> <li class="list-group-item">الأسئلة الشائعة</li></a>
+              <a href="/login" id="bottom"><li class="list-group-item">تواصل معنا</li></a>
             </ul>
       
           </div>
