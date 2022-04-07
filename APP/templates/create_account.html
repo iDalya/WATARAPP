@@ -9,7 +9,7 @@
 
         <!------------  The Form Side (right)------------>
         <div class="col-md-8 createAcountForm">
-            <form action="" target="_self" autocomplete="on">
+            <form action="/create_account" target="_self" autocomplete="on">
 
                 <h1 class="creatAcountHeder">إنشاء حساب جديد</h1><br>
 
@@ -17,37 +17,37 @@
                 <div class="row">
                     <div class="col-md-6">
                         <p class="inputLabel">الاسم</p>
-                        <input class="txtInput" type="text" required>
+                        <input class="txtInput" type="text" name="name" required>
                     </div>
 
                     <div class="col-md-6">
                         <p class="inputLabel">اسم المستخدم</p>
-                        <input class="txtInput" type="text" required>
+                        <input class="txtInput" type="text" name="username" required>
                     </div>
                 </div>
 
                 <!-- 2) البريد الإلكتروني-->
                 <p class="inputLabel">البريد الإلكتروني</p>
-                <input class="txtInput" type="email" required>
+                <input class="txtInput" type="email" name="email" required>
 
                 <!-- 3) كلمة المرور-->
                 <p class="inputLabel">كلمة المرور</p>
-                <input class="txtInput" type="password" required>
+                <input class="txtInput" type="password" name="password" required>
 
                 <!-- 4) تأكيد كلمة المرور-->
                 <p class="inputLabel">تأكيد كلمة المرور </p>
-                <input class="txtInput" type="password" required>
+                <input class="txtInput" type="password" name="password-repeat" required>
 
                 <!-- 5) كلمة المرور-->
                 <p class="inputLabel">رقم الهاتف </p>
-                <input class="txtInput" type="tel" placeholder="+966" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}-[0-9]{4}"
+                <input class="txtInput" type="tel" name="phone" placeholder="+966" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}-[0-9]{4}"
                     dir="ltr" required>
 
                 <!-- 6) البلد -->
                 <p class="inputLabel">البلد</p>
                 <div class="selectListDiv">
                     <i class="material-icons-outlined">expand_more</i>
-                    <select class="ttsVoice" name="" id="" required>
+                    <select class="ttsVoice" name="country" id="" required>
                         <option value="">الأردن</option>
                         <option value="">الإمارات</option>
                         <option value="">البحرين</option>
@@ -80,7 +80,7 @@
                         <p class="inputLabel">الجنس</p>
                         <div class="selectListDiv">
                             <i class="material-icons-outlined">expand_more</i>
-                            <select class="ttsVoice" required>
+                            <select class="ttsVoice" name="gender" required>
                                 <option value="female">أنثى</option>
                                 <option value="male">ذكر</option>
                             </select>
@@ -89,7 +89,7 @@
 
                     <div class="col-md-6">
                         <p class="inputLabel">تاريخ الميلاد</p>
-                        <input class="txtInput" type="date" required>
+                        <input class="txtInput" type="date" name="birthdate" required>
                     </div>
                 </div>
 
